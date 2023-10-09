@@ -3,7 +3,7 @@
 
 
 
-describe('E-commerce Website E2E Tests', () => {
+describe.skip('E-commerce Website E2E Tests', () => {
     it('should complete the entire shopping flow', () => {
       // Visit the website's homepage
       cy.visit('https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html');

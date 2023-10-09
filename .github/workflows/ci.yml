@@ -43,13 +43,13 @@ jobs:
       # Generate Mochawesome Report
       - name: Generate Mochawesome Report
         run: |
-          npx mochawesome-merge mochawesome-report/*.json > merged-report.json
-          npx marge merged-report.json --reportDir mochawesome-report --overwrite
+          npx mochawesome-merge mochawesome/*.json > merged-report.json
+          npx marge merged-report.json --reportDir mochawesome --overwrite
 
       # Optional: Upload the Mochawesome report as a workflow artifact
       - name: Upload Mochawesome Report
         if: always() 
         uses: actions/upload-artifact@v2
         with:
-          name: mochawesome-report
-          path: mochawesome-report/
+          name: mochawesome
+          path: mochawesome/

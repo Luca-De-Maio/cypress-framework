@@ -1,0 +1,7 @@
+# Ignore Cypress binary cache
+./cypress/fixtures/*
+./cypress/screenshots/*
+./cypress/videos/*
+./cypress/videos/*.mp4
+./cypress/logs
+./cypress/results

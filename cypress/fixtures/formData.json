@@ -1,0 +1,15 @@
+[{
+  "name": "John Perez",
+  "age": "30",
+  "mood": "Happy"
+},
+{
+  "name": "John Perez",
+  "age": "27",
+  "mood": "Sad"
+},
+{
+  "name": "Hal Apeno",
+  "age": "55",
+  "mood": "Worried"
+}]

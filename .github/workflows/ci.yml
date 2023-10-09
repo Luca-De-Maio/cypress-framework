@@ -3,11 +3,10 @@ name: Cypress CI
 on:
   push:
     branches:
-      - main  # default branch name
+      - main  # or your default branch name
   pull_request:
     branches:
-      - main  # default branch name
-
+      - main  # or your default branch name
 
 jobs:
   cypress-run:
@@ -39,15 +38,17 @@ jobs:
         run: npm ci
 
       - name: Run Cypress tests
-        run: npx cypress run  # or your script to run Cypress tests
+        run: npx cypress run 
 
+      # Generate Mochawesome Report
       - name: Generate Mochawesome Report
-              run: |
-                npx mochawesome-merge mochawesome-report/*.json > merged-report.json
-                npx marge merged-report.json --reportDir mochawesome-report --overwrite
-      #Mochawesome report as a workflow artifact
+        run: |
+          npx mochawesome-merge mochawesome-report/*.json > merged-report.json
+          npx marge merged-report.json --reportDir mochawesome-report --overwrite
+
+      # Optional: Upload the Mochawesome report as a workflow artifact
       - name: Upload Mochawesome Report
         uses: actions/upload-artifact@v2
         with:
           name: mochawesome-report
-          path: mochawesome-report/      
+          path: mochawesome-report/

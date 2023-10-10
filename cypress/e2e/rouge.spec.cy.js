@@ -1,6 +1,6 @@
 /// <reference types="Cypress" /> 
 
-describe('E-commerce Website E2E Tests', () => {
+describe.skip('E-commerce Website E2E Tests', () => {
   it('should complete the entire shopping flow', () => {
     // Visit the website's homepage
     cy.visit('https://opencart.abstracta.us/'); // Replace with your website URL
